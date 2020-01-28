@@ -24,7 +24,7 @@ import UIKit
 
 extension HeroTransition: UIViewControllerTransitioningDelegate {
   var interactiveTransitioning: UIViewControllerInteractiveTransitioning? {
-    return forceNotInteractive ? nil : self
+    return forceNotInteractive || forceNotInteractiveOverride ? nil : self
   }
 
   public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

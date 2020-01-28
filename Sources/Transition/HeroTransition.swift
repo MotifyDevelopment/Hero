@@ -109,6 +109,8 @@ open class HeroTransition: NSObject {
     return !progressRunner.isRunning
   }
 
+  public var forceNotInteractiveOverride: Bool = false
+
   internal var progressUpdateObservers: [HeroProgressUpdateObserver]?
 
   /// max duration needed by the animators
